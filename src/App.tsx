@@ -2,11 +2,20 @@ import './App.css';
 
 import React from 'react';
 
+import {
+  ChakraProvider,
+  extendTheme,
+} from '@chakra-ui/react';
+
+import { Unit } from './pages/Unit';
+
+const theme = extendTheme({});
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Unit />
+    </ChakraProvider>
   );
 }
 
